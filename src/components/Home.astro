@@ -1,0 +1,31 @@
+---
+import Card from "./Card.astro";
+import Carousel from "./Carousel.astro";
+
+
+---
+<main>
+    <section class="container mx-auto py-10 px-4 md:px-0">
+        <h1 class="text-4xl font-bold text-center dark:text-white">
+            Empresa de Electricidad en Madrid
+        </h1>
+        <h6 class="text-center text-gray-500 dark:text-gray-200 m-4">
+            Electricistas en Madrid especializados en servicios eléctricos en Madrid. Desde hace más de 15 años, brindamos a nuestros clientes soluciones efectivas y seguras, cubriendo todo desde instalaciones eléctricas hasta mantenimientos y reparaciones. Contamos con un equipo de electricistas certificados y experimentados que están disponibles para asegurar que tu hogar o negocio siempre estén funcionando sin interrupciones. Priorizamos la calidad y la seguridad en cada proyecto, utilizando los materiales más innovadores y de la mejor calidad del mercado.
+        </h6>
+        <Carousel />
+        <a 
+        href="./contact"
+        class="flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-500 md:py-2 md:text-lg md:px-6"
+        >
+        Contacto
+        </a>
+    </section>
+    <section class="flex gap-8 flex-wrap justify-center items-center container mx-auto py-10 px-4 md:px-0">
+        <Card button="Instalaciones Eléctricas" title="Instalaciones en vivienda" description="Conoce las instalaciones en vivienda que brinda nuestro equipo de electricistas." image="./assets/instalacion.webp" href="./instalacion" alt="Instalaciones en vivienda" />
+        <Card button="Iluminción" title="Iluminacion" description="Conoce las instalaciones de iluminacion que brinda nuestro equipo de electricistas." image="./assets/iluminacion.webp" href="./iluninacion" alt="Iluminaciones" />
+        <Card button="Averias eléctricas" title="Averias eléctricas" description="Conoce las averias eléctricas que brinda nuestro equipo de electricistas." image="./assets/averias.webp" href="./averias" alt="Averias" />
+        <Card button="Recargas eléctricas" title="Recargas eléctricas" description="Conoce las recargas eléctricas que brinda nuestro equipo de electricistas." image="./assets/recarga.webp" href="./recarga" alt="Recargas" />
+        <Card button="Boletines eléctricos" title="Boletines eléctricos" description="Conoce los boletines eléctricos que brinda nuestro equipo de electricistas." image="./assets/averias.webp" href="./boletines" alt="Boletines" />
+        <Card button="Domotica" title="Domotica" description="Conoce los dominos que brinda nuestro equipo de electricistas." image="./assets/averias.webp" href="./domotica" alt="Domotica" />
+    </section>
+</main>
