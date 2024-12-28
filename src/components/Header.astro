@@ -1,0 +1,23 @@
+---
+import Carousel from "./Carousel.astro";
+
+const { title, description, carousel } = Astro.props;
+---
+
+<section class="container mx-auto py-10 px-4 md:px-0">
+    <h1 class="text-4xl font-bold text-center dark:text-white">
+        {title}
+    </h1>
+    <h6 class="hidden sm:block text-center text-gray-500 dark:text-gray-200 m-4">
+        {description}
+    </h6>
+    {
+        carousel && <Carousel />
+    }
+    <a 
+    href="tel:+34691502361"
+    class="flex items-center justify-center mt-2 px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-500 md:py-2 md:text-lg md:px-6"
+    >
+    Llamanos
+    </a>
+</section>

@@ -1,29 +1,18 @@
 ---
 import Card from "./Card.astro";
-import Carousel from "./Carousel.astro";
+import Header from "./Header.astro";
 ---
 <main>
-    <section class="container mx-auto py-10 px-4 md:px-0">
-        <h1 class="text-4xl font-bold text-center dark:text-white">
-            Empresa de Electricidad en Madrid
-        </h1>
-        <h6 class="text-center text-gray-500 dark:text-gray-200 m-4">
-            Instalaciones en vivienda, iluminaciones, averias eléctricas, recargas eléctricas, boletines eléctricos y domotica.
-        </h6>
-       
-        <a 
-        href="./contact"
-        class="flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-500 md:py-2 md:text-lg md:px-6"
-        >
-        Contacto
-        </a>
-    </section>
+    <Header 
+    title="Empresa de Eléctricidad en Madrid" 
+    description="Instalaciones eléctricas en Madrid"
+    />
     <section class="flex gap-8 flex-wrap justify-center items-center container mx-auto py-10 px-4 md:px-0">
-        <Card button="Averias en vivienda" title="Averias en vivienda" description="Atendemos averias eléctricas en toda la comunidad de Madrid" image="./assets/instalacion.webp" href="./instalacion" alt="Instalaciones en vivienda" />
-        <Card button="Iluminción" title="Iluminacion" description="Conoce las instalaciones de iluminacion que brinda nuestro equipo de electricistas." image="./assets/iluminacion.webp" href="./iluninacion" alt="Iluminaciones" />
-        <Card button="Averias eléctricas" title="Averias eléctricas" description="Conoce las averias eléctricas que brinda nuestro equipo de electricistas." image="./assets/averias.webp" href="./averias" alt="Averias" />
-        <Card button="Recargas eléctricas" title="Recargas eléctricas" description="Conoce las recargas eléctricas que brinda nuestro equipo de electricistas." image="./assets/recarga.webp" href="./recarga" alt="Recargas" />
-        <Card button="Boletines eléctricos" title="Boletines eléctricos" description="Conoce los boletines eléctricos que brinda nuestro equipo de electricistas." image="./assets/averias.webp" href="./boletines" alt="Boletines" />
-        <Card button="Domotica" title="Domotica" description="Conoce los dominos que brinda nuestro equipo de electricistas." image="./assets/averias.webp" href="./domotica" alt="Domotica" />
+        <Card title="Obra nueva" description="Realizamos instalaciones eléctricas en obra nueva, reformas y ampliaciones, garantizando un trabajo eficiente y seguro." image="./assets/obra.webp" alt="Obra nueva" />
+        <Card title="Comunidades" description="Ofrecemos un servicio integral que incluye mantenimiento preventivo, reparación de averías y proyectos de reforma para garantizar la seguridad y el buen funcionamiento de las zonas comunes." image="./assets/contadores.webp" alt="Comunidades" />
+        <Card title="Comercios y locales" description="Realizamos instalaciones eléctricas adaptadas a las necesidades de cada comercio, garantizando el cumplimiento de la normativa vigente." image="./assets/local.webp" alt="Comercios y locales" />
+        <Card title="Instalaciones industriales" description="Realizamos instalaciones eléctricas industriales adaptadas a las necesidades de cada sector, garantizando la continuidad operativa de tu negocio." image="./assets/industria.webp" alt="Instalaciones industriales" />
+        <Card title="Cableado estructurado" description="Diseñamos e instalamos sistemas de cableado estructurado personalizados para garantizar una conectividad rápida y fiable en tu empresa." image="./assets/rj45.webp" href="./boletines" alt="Boletines" />
+        <Card title="Jardines y exteriores" description="Realizamos instalaciones eléctricas adaptadas a las necesidades de cada jardín, garantizando la seguridad y el buen funcionamiento de tus equipos." image="./assets/jardin.webp" href="./domotica" alt="Domotica" />
     </section>
 </main>
