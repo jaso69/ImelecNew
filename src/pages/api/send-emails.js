@@ -1,6 +1,6 @@
 import { Resend } from 'resend'
 
-const resend = new Resend('')
+const resend = new Resend(import.meta.env.RESEND_API_KEY)
 
 export async function POST ({ request }) {
   // console.log(await request.json())
@@ -9,7 +9,7 @@ export async function POST ({ request }) {
   try {
     const response = await resend.emails.send({
       from: 'info@imelec.es',
-      to: 'info@imelec.es',
+      to: 'joseonieva@gmail.com',
       subject: 'Presupuesto',
       html: `
                 <p>Nombre: ${nombre}</p>
