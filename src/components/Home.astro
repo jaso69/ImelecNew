@@ -1,4 +1,5 @@
 ---
+import Asistente from "./Asistente.astro";
 import Card from "./Card.astro";
 import Header from "./Header.astro";
 ---
@@ -10,9 +11,11 @@ import Header from "./Header.astro";
     />
 
     <section class="flex gap-8 flex-wrap justify-center items-center container mx-auto py-10 px-4 md:px-0">
-        <Card button="+ Info" title="Instalaciones eléctricas" description="Conoce las instalaciones en vivienda que brinda nuestro equipo." image="./assets/instalacion.webp" href="./instalaciones" alt="Instalaciones en vivienda" />
-        <Card button="+ Info" title="Iluminacion" description="Conoce las instalaciones de iluminacion que brinda nuestro equipo de electricistas." image="./assets/iluminacion.webp" href="./averias" alt="Iluminaciones" />
-        <Card button="+ Info" title="Averias eléctricas" description="Soluciones rápidas y eficientes para tus averías eléctricas." image="./assets/averias.webp" href="./averias" alt="Averias" llama />
-        <Card button="+ Info" title="Domotica" description="Nuestros sistemas domóticos te permiten integrar diferentes dispositivos y tecnologías, como asistentes virtuales, cámaras de seguridad y sistemas de audio. " image="./assets/domotica.webp" href="./domotica" alt="Domótica" />
+        <Card button="Info" title="Instalaciones eléctricas" description="Conoce las instalaciones en vivienda que brinda nuestro equipo." image="./assets/instalacion.webp" href="./instalaciones" alt="Instalaciones en vivienda" />
+        <Card button="Info" title="Iluminacion" description="Conoce las instalaciones de iluminacion que brinda nuestro equipo de electricistas." image="./assets/iluminacion.webp" href="./averias" alt="Iluminaciones" />
+        <Card button="Info" title="Averias eléctricas" description="Soluciones rápidas y eficientes para tus averías eléctricas." image="./assets/averias.webp" href="./averias" alt="Averias" llama />
+        <Card button="Info" title="Domotica" description="Nuestros sistemas domóticos te permiten integrar diferentes dispositivos y tecnologías, como asistentes virtuales, cámaras de seguridad y sistemas de audio. " image="./assets/domotica.webp" href="./domotica" alt="Domótica" />
     </section>
 </main>
+
+<Asistente />
