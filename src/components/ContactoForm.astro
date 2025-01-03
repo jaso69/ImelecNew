@@ -1,13 +1,17 @@
 ---
-import Asistente from "./Asistente.astro";
 import Formulario from "./Formulario.astro";
 import Header from "./Header.astro";
-
 ---
 
-<Header title="Empresa de Electricidad en Madrid" description="Imelec electricidad, Telefono: 691 50 23 61, Email: info@imelec.es, Dirección: Ctra de Loeches 55, 28850, Torrejon de Ardoz, Madrid"/>
+<Header title="Empresa de Electricidad en Madrid" />
 <section class="flex flex-col container mx-auto py-2 px-4 md:px-0 items-center">
     <div class="flex flex-col items-center justify-center mb-4">
+        <article class="flex flex-col mb-4 justify-center gap-2 p-2 rounded-xl items-center mt-4 text-white bg-blue-700">
+            <h6 class="font-bold text-yellow-500 text-center">Imelec electricidad</h6>
+            <p class="text-center">Telefono: <span class="font-bold">691 50 23 61</span></p>
+            <p class="text-center">Email: <span class="font-bold">imelec@gmail.com</span></p>
+            <p class="text-center">Dirección: <span class="font-bold">Ctra de Loeches 55, 28850, Torrejon de Ardoz, Madrid</span></p>
+        </article>
         <h1 class="text-3xl font-bold text-gray-900 dark:text-white">
             Contacto
         </h1>
@@ -18,17 +22,3 @@ import Header from "./Header.astro";
     <Formulario />
 </section>
 
-<script>
-
-    import { enviarCorreo } from "../lib/api.js";
-
-    const form = document.querySelector('form') as HTMLFormElement
-
-    form.addEventListener('submit', async (event) => {
-        event.preventDefault()
-        await enviarCorreo()
-    })
-
-</script>
-  
-<Asistente />

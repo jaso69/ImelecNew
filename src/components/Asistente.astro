@@ -1,4 +1,4 @@
-<div id="chat-window" class="hidden z-50 fixed bottom-24 right-6 w-80 h-[600px] opacity-[98%] bg-white shadow-lg shadow-blue-500/50 rounded-lg flex-col gap-4 overflow-hidden">
+<div id="chat-window" class="hidden fixed bottom-6 right-6 w-80 h-[500px] opacity-[98%] bg-white shadow-lg shadow-blue-500/50 rounded-lg flex-col gap-4 overflow-hidden">
     <!-- Cabecera -->
     <div class="bg-blue-600 text-white flex justify-between items-center px-4 py-2 rounded-t-lg">
         <span class="font-bold">Asistente Virtual</span>
@@ -57,11 +57,13 @@ import { assist } from "../lib/assist";
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault()
-        const item =`<li class="p-2 mb-2 w-auto rounded-md bg-blue-100 text-blue-800 text-sm">${userInput.value}</li>`
-        cuerpo.insertAdjacentHTML("beforeend", item);
         let pregunta = userInput.value 
-        assist(pregunta)
-        userInput.value = "";      
+        if (pregunta.trim() !== '') {
+            const item =`<li class="p-2 mb-2 w-auto rounded-md bg-blue-100 text-blue-800 text-sm">${userInput.value}</li>`
+            cuerpo.insertAdjacentHTML("beforeend", item);
+            assist(pregunta)
+            userInput.value = "";      
+        } 
     })
 
     openChatButton.addEventListener("click", () => {

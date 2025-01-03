@@ -13,11 +13,11 @@ export const respuesta = (resp) => {
 }
 
 export async function assist (pregunta) {
+  if (pregunta.trim() === '') { return }
   loading.classList.remove('hidden')
   loading.classList.add('block')
   const prompt = { role: 'user', content: pregunta }
   historico.push(prompt)
-  console.log(historico)
   const url = 'https://jaweb.es:3000/api/imelec?prompt=' + pregunta
   const data = await fetch(url, {
     method: 'POST',

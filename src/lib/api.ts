@@ -1,25 +1,24 @@
-const form = document.querySelector('form') as HTMLFormElement
-const nombre = form.querySelector('#nombre') as HTMLInputElement
-const email = form.querySelector('#email') as HTMLInputElement
-const telefono = form.querySelector('#telefono') as HTMLInputElement
-const descripcion = form.querySelector('#descripcion') as HTMLInputElement
+const formulario = document.querySelector('#formulario') as HTMLFormElement
+const nombre = formulario.querySelector('#nombre') as HTMLInputElement
+const email = formulario.querySelector('#email') as HTMLInputElement
+const telefono = formulario.querySelector('#telefono') as HTMLInputElement
+const descripcion = formulario.querySelector('#descripcion') as HTMLInputElement
 
 export async function enviarCorreo() {
-    const response = await fetch('/api/send-emails', {
+    const formsend = { 
+        email: email.value,
+        nombre: nombre.value,
+        telefono: telefono.value,
+        descripcion: descripcion.value,
+    }
+    const response = await fetch('https://jaweb.es:3000/api/emails', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            email: email.value,
-            nombre: nombre.value,
-            telefono: telefono.value,
-            descripcion: descripcion.value,
-        }),
+        mode: 'cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formsend),
     });
 
-    const { success } = await response.json();
-    if (success) {
+    if (response.ok) {
         window.location.replace("index.html");
     }
 }

@@ -1,11 +1,17 @@
+---
+const { title, description, href } = Astro.props;
+---
+
 <!doctype html>
-<html lang="es">
+<html lang="es" class="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-		<title>Imelec Electricidad</title>
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={href} />
 	</head>
 	<body class="bg-gray-100 dark:bg-gray-900">
 		<slot />
