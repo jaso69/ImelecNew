@@ -7,7 +7,11 @@ const { title, description, image, href, alt, button, llama } = Astro.props;
 ---
 <div class="flex flex-col duration-700 hover:scale-105 hover:shadow-lg hover:shadow-blue-600 justify-start max-w-xs h-[480px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href={href}>
-        <img class="aspect-video rounded-t-lg" src={image} alt={alt} />
+        <img 
+            class="aspect-video rounded-t-lg" 
+            src={image}     
+            alt={alt}
+        />
     </a>
     <div class="flex pl-4 mt-4">
         <a href={href}>

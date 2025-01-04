@@ -90,6 +90,19 @@ const classHref = "block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:ho
             </li>
             <li>
                 <a 
+                href="/donde" 
+                class:list={[
+                    classHref,
+                    {
+                       'md:dark:text-blue-500': url.includes('/donde') && url.length > 2
+                    }
+                    ]}                
+                >
+                Donde trabajamos
+                </a>
+            </li>
+            <li>
+                <a 
                 href="/contacto"    
                 class:list={[
                     classHref,
@@ -101,6 +114,7 @@ const classHref = "block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:ho
                 Contacto
                 </a>
             </li>
+            
             </ul>
         </div>
     </div>
