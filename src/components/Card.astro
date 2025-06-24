@@ -11,6 +11,7 @@ const { title, description, image, href, alt, button, llama } = Astro.props;
             class="aspect-video rounded-t-lg" 
             src={image}     
             alt={alt}
+            loading="lazy"
         />
     </a>
     <div class="flex pl-4 mt-4">

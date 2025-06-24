@@ -7,7 +7,7 @@ const historico = []
 export const respuesta = (resp) => {
   loading.classList.remove('block')
   loading.classList.add('hidden')
-  const item = `<li class="p-2 mb-2 w-auto rounded-md bg-red-100 text-red-800 text-sm">${resp.message}</li>`
+  const item = `<li class="p-2 mb-2 w-auto rounded-md bg-red-100 text-red-800 text-sm">${resp.choices[0].message.content}</li>`
   cuerpo.insertAdjacentHTML('beforeend', item)
   bodychat.scrollTop = bodychat.scrollHeight
 }
@@ -18,7 +18,7 @@ export async function assist (pregunta) {
   loading.classList.add('block')
   const prompt = { role: 'user', content: pregunta }
   historico.push(prompt)
-  const url = 'https://jaweb.es:3000/api/imelec?prompt=' + pregunta
+  const url = 'https://apivercel-olive.vercel.app/api/ask-deepseek/imelec?' + pregunta
   const data = await fetch(url, {
     method: 'POST',
     mode: 'cors',

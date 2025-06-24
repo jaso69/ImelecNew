@@ -21,4 +21,5 @@ export async function enviarCorreo() {
     if (response.ok) {
         window.location.replace("index.html");
     }
+    
 }
