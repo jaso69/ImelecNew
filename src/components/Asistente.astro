@@ -1,7 +1,7 @@
-<div id="chat-window" class="hidden fixed bottom-6 right-6 w-80 h-[500px] opacity-[98%] bg-white shadow-lg shadow-blue-500/50 rounded-lg flex-col gap-4 overflow-hidden">
+<div id="chat-window" class="hidden fixed bottom-24 right-96 w-2/3 h-[700px] opacity-[98%] bg-white shadow-lg shadow-blue-500/50 rounded-lg flex-col gap-4 overflow-hidden">
     <!-- Cabecera -->
     <div class="bg-blue-600 text-white flex justify-between items-center px-4 py-2 rounded-t-lg">
-        <span class="font-bold">Asistente Virtual</span>
+        <span class="font-bold">Tecnico Virtual</span>
         <button id="close-chat" class="text-xl font-bold">×</button>
     </div>
 
@@ -24,12 +24,12 @@
             id="user-input" 
             autocomplete="off"
             placeholder="Escribe tu mensaje..." 
-            class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+            class="flex w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300"
         >
         <button 
             type="submit"
             id="send-button" 
-            class="ml-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+            class="ml-2 w-48 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
         >
             Enviar
         </button>
@@ -39,7 +39,7 @@
 <!-- Botón flotante -->
 <button 
     id="open-chat" 
-    class="fixed w- animate-pulse bottom-6 right-6 bg-blue-600 text-white w-14 h-14 rounded-full text-2xl flex items-center justify-center shadow-lg hover:bg-blue-700 transition"
+    class="fixed animate-pulse bottom-24 right-6 bg-blue-600 text-white w-24 h-14 rounded-full text-2xl flex items-center justify-center shadow-lg hover:bg-blue-700 transition"
 >
     💬
 </button>
