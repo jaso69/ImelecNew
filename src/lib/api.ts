@@ -11,7 +11,7 @@ export async function enviarCorreo() {
         telefono: telefono.value,
         descripcion: descripcion.value,
     }
-    const response = await fetch('https://jaweb.es:3000/api/emails', {
+    const response = await fetch('https://imelec-emails.vercel.app/', {
         method: 'POST',
         mode: 'cors',
         headers: { 'Content-Type': 'application/json' },
